@@ -28,7 +28,8 @@ module Pemilu
 
        # Prepare conditions based on params
         valid_params = {
-          provinsi: 'id_provinsi'
+          provinsi: 'id_provinsi',
+          kode: 'id_dapil'
         }
 
         conditions = Hash.new
@@ -46,6 +47,7 @@ module Pemilu
           .each do |dapil|
             list_dapil << {
               id: dapil.id,
+              kode: dapil.id_dapil,
               nama: dapil.nama,
               province: {
                 id: dapil.province.id,
@@ -79,6 +81,7 @@ module Pemilu
                 total: 1,
                 dapil: [{
                   id: dapil.id,
+                  kode: dapil.id_dapil,
                   nama: dapil.nama,
                   provinsi: {
                     id: dapil.province.id,
