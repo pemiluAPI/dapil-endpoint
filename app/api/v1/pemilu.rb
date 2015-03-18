@@ -50,8 +50,8 @@ module Pemilu
               kode: dapil.id_dapil,
               nama: dapil.nama,
               province: {
-                id: dapil.province.id,
-                nama: dapil.province.nama
+                id: dapil.province_id,
+                nama: dapil.province_nama
               },
               jumlah_kursi: dapil.jumlah_kursi,
               wilayah: build_wilayah_dapil(dapil.wilayah_dapils)
@@ -84,8 +84,8 @@ module Pemilu
                   kode: dapil.id_dapil,
                   nama: dapil.nama,
                   provinsi: {
-                    id: dapil.province.id,
-                    nama: dapil.province.nama
+                    id: dapil.province_id,
+                    nama: dapil.province_nama
                   },
                   jumlah_kursi: dapil.jumlah_kursi,
                   wilayah: build_wilayah_dapil(dapil.wilayah_dapils)
